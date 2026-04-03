@@ -1,25 +1,10 @@
-﻿
-var numbers = new int[3];
-numbers[0] = 1;
-Console.WriteLine(numbers[0]);
-Console.WriteLine(numbers[1]);
-Console.WriteLine(numbers[2]);
+﻿var firstName = "Asoh";
+var lastName = "Yannick";
+var fullName = firstName + " " + lastName;
 
-var flags = new bool[3];
-flags[0] = true;
-Console.WriteLine(flags[0]);
-Console.WriteLine(flags[1]);
-Console.WriteLine(flags[2]);
+var myFullName = string.Format("My name is {0} {1}", firstName, lastName);
 
-var persons = new string[3] {"John", "Paul", "Peter"};
-Console.WriteLine(string.Join(", ", persons));
+var names = new string[3] {"John", "Jack", "Mary"};
+var formattedNames = string.Join(",", names);
+Console.WriteLine(formattedNames.ToLower());
 
-for(int i = 0; i < persons.Length; i++)
-{
-  Console.WriteLine(persons[i]);
-}
-
-foreach(var person in persons)
-{
-  Console.WriteLine(person);
-}

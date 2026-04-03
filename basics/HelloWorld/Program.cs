@@ -1,10 +1,12 @@
-﻿var firstName = "Asoh";
-var lastName = "Yannick";
-var fullName = firstName + " " + lastName;
+﻿
 
-var myFullName = string.Format("My name is {0} {1}", firstName, lastName);
+var method = ShippingMethod.Express;
+Console.WriteLine((int) method);
 
-var names = new string[3] {"John", "Jack", "Mary"};
-var formattedNames = string.Join(",", names);
-Console.WriteLine(formattedNames.ToLower());
+var methodId = 3;
+Console.WriteLine((ShippingMethod) methodId);
 
+Console.WriteLine(method.ToString());
+
+var methodName = "Express";
+var shippingMethod = (ShippingMethod) Enum.Parse(typeof(ShippingMethod), methodName);

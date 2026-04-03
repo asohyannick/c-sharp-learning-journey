@@ -1,10 +1,21 @@
-﻿try
-{
-   var str = "true";
-   bool b = Convert.ToBoolean(str);
-   System.Console.WriteLine(b);
-}
-catch (System.Exception)
-{
-     System.Console.WriteLine("The num could not be converted to a byte.");
-}
+﻿
+var a = 1;
+var b = 2;
+var c = 3;
+System.Console.WriteLine(a + b);
+System.Console.WriteLine(a / 3);
+System.Console.WriteLine((float) a / (float)b);
+System.Console.WriteLine(a + b * c);
+System.Console.WriteLine((a + b) * c);
+System.Console.WriteLine(a > b);
+System.Console.WriteLine(c == b);
+System.Console.WriteLine(a != b);
+System.Console.WriteLine(!(a != b));
+System.Console.WriteLine(c > b && c > a);
+System.Console.WriteLine( c > b && c == a);
+System.Console.WriteLine(c > b || c == a);
+
+// inline comments
+/*
+  Multi-line comment
+*/

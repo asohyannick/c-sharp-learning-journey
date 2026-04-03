@@ -1,9 +1,34 @@
 ﻿
-var a = 10;
-var b = a;
-b++;
-Console.WriteLine(string.Format("a: {0}, b: {1}", a, b));
-var array1 = new int[3] {1, 2, 3};
-var array2 = array1;
-array2[0] = 0;
-Console.WriteLine(string.Format("array1[0]"));
+int hour = 10;
+bool isGoldCustomer = true;
+float price = isGoldCustomer ? 19.95f : 29.95f;
+if (hour > 0 && hour < 12)
+{
+  Console.WriteLine("It's morning");
+}
+else if (hour >= 12 && hour < 18)
+{
+  Console.WriteLine("It's afternoon");
+}
+else
+{
+  Console.WriteLine("It's evening.");
+}
+
+Console.WriteLine(price);
+
+var season = Season.Autumn;
+switch (season)
+{
+  case Season.Autumn:
+    Console.WriteLine("It's autumn and a beautiful season");
+    break;
+  case Season.Summer:
+    Console.WriteLine("It's perfect to go to beach");
+    break;
+  default:
+    Console.WriteLine("Unknown Season");
+    break;
+}
+
+

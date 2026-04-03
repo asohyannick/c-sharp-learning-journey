@@ -1,20 +1,10 @@
-﻿byte number = 2;
-int count = 10;
-float totalPrice = 20.95F;
-char character = 'A';
-string firstName = "Asoh";
-bool isWorking = true;
-var lastName = "Yannick";
-var isAuthenticated = true;
-Console.WriteLine(number);
-Console.WriteLine(totalPrice);
-System.Console.WriteLine(count);
-System.Console.WriteLine(character);
-System.Console.WriteLine(firstName);
-System.Console.WriteLine(isWorking);
-System.Console.WriteLine(lastName);
-System.Console.WriteLine(isAuthenticated);
-System.Console.WriteLine("{0} {1}", byte.MinValue, byte.MaxValue);
-System.Console.WriteLine("{0} {1}", float.MinValue, float.MaxValue);
-const int MaxPrice = 20;
-System.Console.WriteLine(MaxPrice);
+﻿try
+{
+   var str = "true";
+   bool b = Convert.ToBoolean(str);
+   System.Console.WriteLine(b);
+}
+catch (System.Exception)
+{
+     System.Console.WriteLine("The num could not be converted to a byte.");
+}

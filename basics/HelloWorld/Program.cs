@@ -1,0 +1,18 @@
+﻿Console.WriteLine("Hello, World!");
+Console.WriteLine("Good mornig Yannick");
+Console.WriteLine("You're will become a .Net Developer");
+// Console.Clear();
+byte by = 1;
+bool isMarried = true;
+int age = 30;
+string name = "John Smith";
+float price = 10.0f;
+long discount = 5;
+decimal minPrice = 2;
+Console.WriteLine(by);
+Console.WriteLine(age);
+Console.WriteLine(isMarried);
+Console.WriteLine(name);
+Console.WriteLine(discount);
+Console.WriteLine(price);
+Console.WriteLine(minPrice);

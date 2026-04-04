@@ -1,8 +1,21 @@
-﻿var random = new Random();
-const int passwordLength = 10;
-char[] buffer = new char[passwordLength];
-for(var i = 0; i < passwordLength; i ++)
-buffer[i] = (char)('a' + random.Next(0, 20));
+﻿var numbers = new int[] {3, 2, 1, 14, 7, 10};
+// Array methods
+// length
+System.Console.WriteLine(numbers.Length);
+// index
+var index = Array.IndexOf(numbers, 14);
+System.Console.WriteLine(index);
+// clear 
+Array.Clear(numbers, 0, 2);
+foreach(var num in numbers) 
+System.Console.WriteLine(num);
 
-var password = new string(buffer);
-Console.WriteLine(password);
+// copy()
+int[] anotherCopy = new int[3];
+Array.Copy(numbers, anotherCopy, 3);
+
+// sort
+Array.Sort(numbers);
+
+// Reverse
+

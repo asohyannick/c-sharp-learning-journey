@@ -32,3 +32,48 @@ switch (season)
 }
 
 
+for (var i = 1; i <= 10; i++)
+{
+  if (i % 2 == 0)
+    Console.WriteLine(i);
+}
+
+for (var i = 10; i >= 1; i--)
+{
+  Console.WriteLine(i);
+}
+
+var name = "John Smith";
+for (var i = 0; i < name.Length; i++)
+{
+  System.Console.WriteLine(name[i]);
+}
+
+foreach (var character in name)
+{
+  Console.WriteLine(character);
+}
+
+var numbers = new int[] { 1, 2, 3, 4 };
+foreach (var number in numbers)
+{
+  Console.WriteLine(number);
+}
+
+var y = 0;
+while (y <= 10)
+{
+  if (y % 2 == 0)
+    break;
+  Console.WriteLine(y);
+}
+
+while (true)
+{
+  Console.WriteLine("Type your name");
+  var input = Console.ReadLine();
+  if (!String.IsNullOrWhiteSpace(input))
+    continue;
+  Console.WriteLine("@Echo:", input);
+  break;
+}

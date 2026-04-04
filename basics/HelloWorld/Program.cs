@@ -1,36 +1,26 @@
 ﻿
-var dateTime = new DateTime(2026, 1, 1);
-var now = DateTime.Now;
-var today = DateTime.Today;
-Console.WriteLine("Hour" + now.Hour);
-Console.WriteLine("Minute" + now.Minute);
+var fullName = "Asoh Yannick    ";
+System.Console.WriteLine("ToUpper: '{0}'", fullName.Trim().ToUpper());
+System.Console.WriteLine("ToLower: '{0}'", fullName.Trim().ToLower());
+var index = fullName.IndexOf(" ");
+var firstName = fullName.Substring(0, index);
+var lastName = fullName.Substring(index + 1);
+System.Console.WriteLine("FirstName: " + firstName);
+System.Console.WriteLine("LastName: " + lastName);
+var names = fullName.Split(' ');
+System.Console.WriteLine("FirstName: " + names[0]);
+System.Console.WriteLine("LastName: " + names[1]);
+fullName.Replace("Mosh", "Peace");
+fullName.Replace("0", "1");
+System.Console.WriteLine(fullName.Replace("Mosh", "Joy"));
 
-var tommorrow = now.AddDays(1);
-var yesterday = now.AddDays(-1);
+if (String.IsNullOrWhiteSpace("") || String.IsNullOrEmpty(""))
+{
+  Console.WriteLine("Invalid");
+}
 
-System.Console.WriteLine(now.ToLongDateString());
-System.Console.WriteLine(now.ToShortDateString());
-System.Console.WriteLine(now.ToString());
-System.Console.WriteLine(now.ToLongTimeString());
-System.Console.WriteLine(now.ToString("yyyyy-mm-dd HH-mm"));
-
-var start = DateTime.Now;
-var timeSpan = new TimeSpan(1, 2, 3);
-var timeSpan1 = new TimeSpan(1, 0, 0);
-var timeSpan3 = TimeSpan.FromHours(1);
-var end = DateTime.Now.AddMinutes(2);
-var duration = end - start;
-// Properties
-System.Console.WriteLine("Duration:" + duration);
-System.Console.WriteLine("Minutes:" + timeSpan.Minutes);
-System.Console.WriteLine("Total Minutes" + timeSpan.TotalMinutes);
-
-// Add 
-System.Console.WriteLine("Add Example: " + timeSpan.Add(TimeSpan.FromMinutes(8)));
-System.Console.WriteLine("Substract Example: " + timeSpan.Subtract(TimeSpan.FromMinutes(2)));
-// ToString
-System.Console.WriteLine("ToString:" + timeSpan.ToString());
-
-
-// Parse
-System.Console.WriteLine("Parse"  + TimeSpan.Parse("01:02:03"));
+var str = "25";
+var resultStr = Convert.ToByte(str);
+System.Console.WriteLine(resultStr);
+float price = 29.95f;
+System.Console.WriteLine();;

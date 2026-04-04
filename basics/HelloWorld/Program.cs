@@ -1,29 +1,36 @@
 ﻿
-var numbers = new List<int>
-{
-    1,
-    2,
-    3,
-    4,
-    1
-};
-numbers.AddRange([5, 6, 7]);
-foreach (var number in numbers)
-  Console.WriteLine(number);
-Console.WriteLine();
-Console.WriteLine("Last index of 1:" + numbers.IndexOf(1));
-Console.WriteLine("Last Index of 1" + numbers.LastIndexOf(1));
+var dateTime = new DateTime(2026, 1, 1);
+var now = DateTime.Now;
+var today = DateTime.Today;
+Console.WriteLine("Hour" + now.Hour);
+Console.WriteLine("Minute" + now.Minute);
 
-Console.WriteLine("Count:" + numbers.Count());
+var tommorrow = now.AddDays(1);
+var yesterday = now.AddDays(-1);
 
-foreach (var num in numbers)
-{
-  if (num == 1)
-    numbers.Remove(num);
-}
+System.Console.WriteLine(now.ToLongDateString());
+System.Console.WriteLine(now.ToShortDateString());
+System.Console.WriteLine(now.ToString());
+System.Console.WriteLine(now.ToLongTimeString());
+System.Console.WriteLine(now.ToString("yyyyy-mm-dd HH-mm"));
 
-foreach (var number in numbers)
-{
-  Console.WriteLine(number);
-  numbers.Clear();
-}
+var start = DateTime.Now;
+var timeSpan = new TimeSpan(1, 2, 3);
+var timeSpan1 = new TimeSpan(1, 0, 0);
+var timeSpan3 = TimeSpan.FromHours(1);
+var end = DateTime.Now.AddMinutes(2);
+var duration = end - start;
+// Properties
+System.Console.WriteLine("Duration:" + duration);
+System.Console.WriteLine("Minutes:" + timeSpan.Minutes);
+System.Console.WriteLine("Total Minutes" + timeSpan.TotalMinutes);
+
+// Add 
+System.Console.WriteLine("Add Example: " + timeSpan.Add(TimeSpan.FromMinutes(8)));
+System.Console.WriteLine("Substract Example: " + timeSpan.Subtract(TimeSpan.FromMinutes(2)));
+// ToString
+System.Console.WriteLine("ToString:" + timeSpan.ToString());
+
+
+// Parse
+System.Console.WriteLine("Parse"  + TimeSpan.Parse("01:02:03"));

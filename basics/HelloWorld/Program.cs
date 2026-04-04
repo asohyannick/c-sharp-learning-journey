@@ -1,21 +1,29 @@
-﻿var numbers = new int[] {3, 2, 1, 14, 7, 10};
-// Array methods
-// length
-System.Console.WriteLine(numbers.Length);
-// index
-var index = Array.IndexOf(numbers, 14);
-System.Console.WriteLine(index);
-// clear 
-Array.Clear(numbers, 0, 2);
-foreach(var num in numbers) 
-System.Console.WriteLine(num);
+﻿
+var numbers = new List<int>
+{
+    1,
+    2,
+    3,
+    4,
+    1
+};
+numbers.AddRange([5, 6, 7]);
+foreach (var number in numbers)
+  Console.WriteLine(number);
+Console.WriteLine();
+Console.WriteLine("Last index of 1:" + numbers.IndexOf(1));
+Console.WriteLine("Last Index of 1" + numbers.LastIndexOf(1));
 
-// copy()
-int[] anotherCopy = new int[3];
-Array.Copy(numbers, anotherCopy, 3);
+Console.WriteLine("Count:" + numbers.Count());
 
-// sort
-Array.Sort(numbers);
+foreach (var num in numbers)
+{
+  if (num == 1)
+    numbers.Remove(num);
+}
 
-// Reverse
-
+foreach (var number in numbers)
+{
+  Console.WriteLine(number);
+  numbers.Clear();
+}

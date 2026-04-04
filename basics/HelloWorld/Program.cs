@@ -1,14 +1,19 @@
-﻿using System.Text;
-var sentence = "This is going to be a really really really really long text";
-var summary = StringUtility.SummarizeText(sentence);
-System.Console.WriteLine(summary);
-var builder = new StringBuilder("Hello World");
-builder
-.Append('-', 10)
-.AppendLine()
-.Append("Header")
-.Replace('_', '+')
-.Remove(0, 10)
-.Insert(0, new string('-', 10));
-Console.WriteLine("First Char" + builder[0]);
-System.Console.WriteLine(builder);
+﻿var path = @"c:\somefile.jpg";
+File.Copy("c:\\myfile.jpg", "d:\\temp\\myfile.jpg", true);
+File.Delete(path);
+if(File.Exists(path))
+{
+    //
+}
+
+var content = File.ReadAllText(path);
+var fileInfo = new FileInfo(path);
+fileInfo.CopyTo("...");
+fileInfo.Delete();
+
+if(fileInfo.Exists)
+{
+    // 
+}
+
+fileInfo.Read
